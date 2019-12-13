@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/HF_SMS_APP_deploy" />
+  <setParameter name="DATASConnectionString-Web.config Connection String" value="Data Source=(LocalDB)\v11.0;AttachDbFilename=&quot;C:\Users\C#\Documents\Visual Studio 2013\Projects\HF_SMS_APP\HF_SMS_APP\App_Data\SMSProjectDB.mdf&quot;;Integrated Security=True" />
+</parameters>

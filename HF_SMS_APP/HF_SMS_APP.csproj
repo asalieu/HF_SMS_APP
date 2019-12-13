@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42EF0798-C96E-49B7-B0FE-0A0146EDC39C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HF_SMS_APP</RootNamespace>
+    <AssemblyName>HF_SMS_APP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2013.2.611.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for ASP.NET AJAX Q2 2013\Bin40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.1\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Add.aspx" />
+    <Content Include="addpayment.aspx" />
+    <Content Include="App_Data\SMSProjectDB.mdf" />
+    <Content Include="App_Data\SMSProjectDB_log.ldf">
+      <DependentUpon>SMSProjectDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_README.txt" />
+    <Content Include="backupAdd.aspx" />
+    <Content Include="bursar.aspx" />
+    <Content Include="CallRegister.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\GHr12sH.jpg" />
+    <Content Include="Content\obootstrap.css" />
+    <Content Include="Content\obootstrap.min.css" />
+    <Content Include="Content\mycss.css" />
+    <Content Include="Content\Office.css" />
+    <Content Include="Content\oSite.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="DELETE.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GHr12sH.png" />
+    <Content Include="LoginMain.aspx" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="MarksEntry.aspx" />
+    <Content Include="Modify.aspx" />
+    <Content Include="modifypayment.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="DataSetEmp.xsc">
+      <DependentUpon>DataSetEmp.xsd</DependentUpon>
+    </Content>
+    <Content Include="AccountantMaster.Master" />
+    <None Include="Properties\PublishProfiles\SMSAPPLIVE.pubxml" />
+    <None Include="Properties\PublishProfiles\SMSWeb.pubxml" />
+    <None Include="Scripts\Office\1.0\outlook-15.debug-vsdoc.js" />
+    <None Include="Scripts\Office\1.0\office-vsdoc.js" />
+    <Content Include="Scripts\Office\1.0\ar-sa\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ar-sa\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\ar-sa\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ar-sa\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\bg-bg\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\bg-bg\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\bg-bg\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\bg-bg\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\cs-cz\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\cs-cz\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\cs-cz\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\cs-cz\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\da-dk\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\da-dk\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\da-dk\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\da-dk\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\de-de\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\de-de\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\de-de\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\de-de\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\el-gr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\el-gr\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\el-gr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\el-gr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\en-us\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\en-us\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\en-us\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\en-us\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\es-es\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\es-es\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\es-es\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\es-es\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\et-ee\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\et-ee\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\et-ee\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\et-ee\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\excel-15.debug.js" />
+    <Content Include="Scripts\Office\1.0\excel-15.js" />
+    <Content Include="Scripts\Office\1.0\excelwebapp-15.debug.js" />
+    <Content Include="Scripts\Office\1.0\excelwebapp-15.js" />
+    <Content Include="Scripts\Office\1.0\fi-fi\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\fi-fi\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\fi-fi\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\fi-fi\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\fr-fr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\fr-fr\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\fr-fr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\fr-fr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\he-il\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\he-il\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\he-il\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\he-il\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\hi-in\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\hi-in\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\hi-in\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\hi-in\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\hr-hr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\hr-hr\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\hr-hr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\hr-hr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\hu-hu\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\hu-hu\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\hu-hu\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\hu-hu\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\id-id\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\id-id\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\id-id\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\id-id\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\it-it\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\it-it\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\it-it\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\it-it\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\ja-jp\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ja-jp\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\ja-jp\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ja-jp\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\kk-kz\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\kk-kz\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\kk-kz\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\kk-kz\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\ko-kr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ko-kr\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\ko-kr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ko-kr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\lt-lt\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\lt-lt\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\lt-lt\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\lt-lt\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\lv-lv\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\lv-lv\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\lv-lv\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\lv-lv\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\ms-my\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ms-my\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\ms-my\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ms-my\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\nb-no\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\nb-no\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\nb-no\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\nb-no\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\nl-nl\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\nl-nl\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\nl-nl\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\nl-nl\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\office.debug.js" />
+    <Content Include="Scripts\Office\1.0\office.js" />
+    <Content Include="Scripts\Office\1.0\outlook-15.debug.js" />
+    <Content Include="Scripts\Office\1.0\outlook-15.js" />
+    <Content Include="Scripts\Office\1.0\outlookwebapp-15.debug.js" />
+    <Content Include="Scripts\Office\1.0\outlookwebapp-15.js" />
+    <Content Include="Scripts\Office\1.0\pl-pl\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\pl-pl\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\pl-pl\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\pl-pl\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\powerpoint-15.debug.js" />
+    <Content Include="Scripts\Office\1.0\powerpoint-15.js" />
+    <Content Include="Scripts\Office\1.0\project-15.debug.js" />
+    <Content Include="Scripts\Office\1.0\project-15.js" />
+    <Content Include="Scripts\Office\1.0\pt-br\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\pt-br\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\pt-br\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\pt-br\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\pt-pt\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\pt-pt\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\pt-pt\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\pt-pt\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\ro-ro\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ro-ro\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\ro-ro\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ro-ro\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\ru-ru\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ru-ru\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\ru-ru\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\ru-ru\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\sk-sk\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\sk-sk\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\sk-sk\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\sk-sk\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\sl-si\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\sl-si\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\sl-si\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\sl-si\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\sr-latn-cs\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\sr-latn-cs\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\sr-latn-cs\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\sr-latn-cs\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\sv-se\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\sv-se\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\sv-se\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\sv-se\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\th-th\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\th-th\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\th-th\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\th-th\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\tr-tr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\tr-tr\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\tr-tr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\tr-tr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\uk-ua\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\uk-ua\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\uk-ua\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\uk-ua\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\vi-vn\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\vi-vn\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\vi-vn\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\vi-vn\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\word-15.debug.js" />
+    <Content Include="Scripts\Office\1.0\word-15.js" />
+    <Content Include="Scripts\Office\1.0\zh-cn\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\zh-cn\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\zh-cn\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\zh-cn\outlook_strings.js" />
+    <Content Include="Scripts\Office\1.0\zh-tw\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\zh-tw\office_strings.js" />
+    <Content Include="Scripts\Office\1.0\zh-tw\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1.0\zh-tw\outlook_strings.js" />
+    <Content Include="Scripts\Office\MicrosoftAjax.js" />
+    <Content Include="Scripts\_officeintellisense.js" />
+    <Content Include="viewpayment.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <None Include="DataSetEmp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEmp1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSetEmp.xss">
+      <DependentUpon>DataSetEmp.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Payments.aspx" />
+    <Content Include="Reports\oOutstandingTuition.aspx" />
+    <Content Include="Reports\oreportsbyparam.aspx" />
+    <Content Include="Reports\OutstandingTuition.aspx" />
+    <Content Include="Reports\reportsbyparam.aspx" />
+    <Content Include="Reports\Sponsors.aspx" />
+    <Content Include="Reports\StudentsByClass.aspx" />
+    <Content Include="Reports\StudentsByGender.aspx" />
+    <Content Include="Reports\StudentsByYear.aspx" />
+    <Content Include="Reports\oStudentTranscript.aspx" />
+    <Content Include="Reports\StudentTranscript.aspx" />
+    <Content Include="Reports\TopStudents.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="TeacherMaster.Master" />
+    <Content Include="trnSCRPTDS.xsc">
+      <DependentUpon>trnSCRPTDS.xsd</DependentUpon>
+    </Content>
+    <None Include="trnSCRPTDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>trnSCRPTDS.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="trnSCRPTDS.xss">
+      <DependentUpon>trnSCRPTDS.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountantMaster.Master.cs">
+      <DependentUpon>AccountantMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountantMaster.Master.designer.cs">
+      <DependentUpon>AccountantMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addpayment.aspx.cs">
+      <DependentUpon>addpayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addpayment.aspx.designer.cs">
+      <DependentUpon>addpayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="backupAdd.aspx.cs">
+      <DependentUpon>backupAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backupAdd.aspx.designer.cs">
+      <DependentUpon>backupAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bursar.aspx.cs">
+      <DependentUpon>bursar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bursar.aspx.designer.cs">
+      <DependentUpon>bursar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallRegister.aspx.cs">
+      <DependentUpon>CallRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallRegister.aspx.designer.cs">
+      <DependentUpon>CallRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRVFiles\CrystalReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRVFiles\CrystalReport21.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetEmp.cs">
+      <DependentUpon>DataSetEmp.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetEmp.designer.cs">
+      <DependentUpon>DataSetEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetEmp1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEmp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DELETE.aspx.cs">
+      <DependentUpon>DELETE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DELETE.aspx.designer.cs">
+      <DependentUpon>DELETE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMain.aspx.cs">
+      <DependentUpon>LoginMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginMain.aspx.designer.cs">
+      <DependentUpon>LoginMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MarksEntry.aspx.cs">
+      <DependentUpon>MarksEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MarksEntry.aspx.designer.cs">
+      <DependentUpon>MarksEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modifypayment.aspx.cs">
+      <DependentUpon>modifypayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modifypayment.aspx.designer.cs">
+      <DependentUpon>modifypayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OSTuitionBal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OSTuitionBal1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OSTuitionBal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Payments.aspx.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payments.aspx.designer.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\oOutstandingTuition.aspx.cs">
+      <DependentUpon>oOutstandingTuition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\oOutstandingTuition.aspx.designer.cs">
+      <DependentUpon>oOutstandingTuition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\oreportsbyparam.aspx.cs">
+      <DependentUpon>oreportsbyparam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\oreportsbyparam.aspx.designer.cs">
+      <DependentUpon>oreportsbyparam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OutstandingTuition.aspx.cs">
+      <DependentUpon>OutstandingTuition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\OutstandingTuition.aspx.designer.cs">
+      <DependentUpon>OutstandingTuition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\reportsbyparam.aspx.cs">
+      <DependentUpon>reportsbyparam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\reportsbyparam.aspx.designer.cs">
+      <DependentUpon>reportsbyparam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sponsors.aspx.cs">
+      <DependentUpon>Sponsors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Sponsors.aspx.designer.cs">
+      <DependentUpon>Sponsors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StudentsByClass.aspx.cs">
+      <DependentUpon>StudentsByClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StudentsByClass.aspx.designer.cs">
+      <DependentUpon>StudentsByClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StudentsByGender.aspx.cs">
+      <DependentUpon>StudentsByGender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StudentsByGender.aspx.designer.cs">
+      <DependentUpon>StudentsByGender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StudentsByYear.aspx.cs">
+      <DependentUpon>StudentsByYear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StudentsByYear.aspx.designer.cs">
+      <DependentUpon>StudentsByYear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\oStudentTranscript.aspx.cs">
+      <DependentUpon>oStudentTranscript.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\oStudentTranscript.aspx.designer.cs">
+      <DependentUpon>oStudentTranscript.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StudentTranscript.aspx.cs">
+      <DependentUpon>StudentTranscript.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StudentTranscript.aspx.designer.cs">
+      <DependentUpon>StudentTranscript.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TopStudents.aspx.cs">
+      <DependentUpon>TopStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\TopStudents.aspx.designer.cs">
+      <DependentUpon>TopStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherMaster.Master.cs">
+      <DependentUpon>TeacherMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherMaster.Master.designer.cs">
+      <DependentUpon>TeacherMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="trnSCRPTDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>trnSCRPTDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="viewpayment.aspx.cs">
+      <DependentUpon>viewpayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewpayment.aspx.designer.cs">
+      <DependentUpon>viewpayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CRVFiles\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport21.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSTuitionBal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OSTuitionBal1.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1264</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1264/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

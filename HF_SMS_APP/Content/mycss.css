@@ -1,0 +1,112 @@
+﻿body {
+    /*min-height: 400px;*/
+    background: url(GHr12sH.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image:url(GHr12sH.jpg);
+}
+
+.row {
+    border-top-right-radius: 0;
+    background-color: #fff;
+     
+}
+
+select {
+    width: 161px;
+    height: 22px;
+}
+
+.btns {
+    margin: auto;
+}
+
+.row, .selfun {
+    border: 1px solid darkblue;
+    border-radius: 14px;
+}
+
+.mains, .row, .main, .col, h5, table {
+    margin: auto;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    text-align: left;
+}
+
+h6 {
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div #PageData {
+    background: aliceblue;
+    
+}
+
+.biodata, .classinfo, .studyarea, .contactinfos, .misc {
+    text-align: right;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    color: darkblue;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    height: 30px;  
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+ul {
+    float: right;
+}
+
+    ul li {
+        margin-right: 20px;
+    }
+
+#nav-item ul, li {
+    display: inline;
+    list-style-type: none;
+    color: red;
+    font-family: Garamond;
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-item a{
+    color:#fff;
+}
+.txtcontrols, .tdcontrols {
+    border-radius: 20px;
+}
+
+h5 {
+    color: darkred;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+}
+.btnSignoff{
+    background-color:inherit!important;
+}
+div#Header{
+    margin-bottom:-30px;
+    background-color:skyblue!important;
+}

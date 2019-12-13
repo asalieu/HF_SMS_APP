@@ -1,0 +1,2 @@
+bin\Debug\app.publish\OfficeAppManifests\HF_SMS_APP.OfficeManifest.xml
+C:\Users\C#\Documents\Visual Studio 2013\Projects\HF_SMS_APP\HF_SMS_APP.Office\bin\Debug\app.publish\HF_SMS_APP.Office.app

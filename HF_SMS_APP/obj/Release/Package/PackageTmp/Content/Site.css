@@ -1,0 +1,61 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px; 
+    width:998px;
+    margin:auto;
+/*background-color:beige;*/
+        
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;     
+    margin-top:10px;
+     
+}
+#head,h1{
+    text-align:center!important;
+}
+#head{ 
+    font-family:'Segoe UI';   
+}
+#head,p{
+    font-style:italic;
+}
+ #last{
+    background-color:lightgray;
+    margin-top:63px;
+}
+#first{
+    background-color:lightgray;
+    margin-top:63px;
+}
+#center h2{
+    text-align:center;
+}
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
+.clearfix{
+    clear:both;
+    margin:auto;
+
+}
